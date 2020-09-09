@@ -12,6 +12,7 @@
 ```c-sharp
 public void Test()
 {
+//使用构造方法初始化创建对象；
   Water water=new Water();
 }
 ```
