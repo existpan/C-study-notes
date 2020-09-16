@@ -123,10 +123,12 @@ namespace ClassCourse
             //使用list泛型集合作为容器存放对象。
             //List<Course> courseslist = new List<Course>();
             //courseslist.Add(course1);//省略course2-5添加语句
-
+            
             //逐个添加非常繁琐，故使用泛型集合初始化器进行添加
             List<Course> courseslist = new List<Course> { course1, course2, course3, course4, course5 };
         }
     }
 ```
-
+- 泛型集合 语法List<T> list=new List<T>();
+T=>Type 在定义时明确规定使用类型;
+  
