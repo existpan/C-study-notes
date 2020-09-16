@@ -71,3 +71,5 @@ namespace ClassCourse
 5. 关于对象初始化器
 - C#3.0时代引入
 作用：更加灵活的初始化对象的“属性”。
+
+# 对象封装容器之泛型集合list和Dictionary的使用
