@@ -114,6 +114,18 @@ namespace ClassCourse
             Course course3 = new Course(1003, "高等数学（一）", 65, "朱建民", "国防科技大学");
             Course course4 = new Course(1004, "投资理财与生活", 10, "郑海荣", "福建农林大学");
             Course course5 = new Course(1005, "婚恋-职场-人格", 51, "张晓文", "武汉理工大学");
+            
+            //使用数组作为容器存放对象 
+            Course[] coursesarray = new Course[4];
+            coursesarray[0] = course1;//……省略course2-5添加语句
+                                      //使用数组存放存在诸多不便，例如初始化空间大小固定不灵活，且需要明确后进行使用。
+
+            //使用list泛型集合作为容器存放对象。
+            //List<Course> courseslist = new List<Course>();
+            //courseslist.Add(course1);//省略course2-5添加语句
+
+            //逐个添加非常繁琐，故使用泛型集合初始化器进行添加
+            List<Course> courseslist = new List<Course> { course1, course2, course3, course4, course5 };
         }
     }
 ```
