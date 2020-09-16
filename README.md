@@ -95,4 +95,26 @@ namespace ClassCourse
         public string Colleges { get; set; }//院校
     }
 ```
+- 创建课程测试类
+```csharp
+    public class TestCourse
+    {
+        public void CreateCourses()
+        {
+            //1.使用属性赋值
+            Course course1 = new Course();
+            course1.CourseId = 1001;
+            course1.CourseName = "程序设计与算法（一）C语言程序设计";
+            course1.ClassHour = 75;
+            course1.TeacherName = "郭炜";
+            course1.Colleges = "北京大学";
+            //2.使用对象初始化器为对象赋初值
+            Course course2 = new Course { CourseId = 1002, CourseName = "商务英语", ClassHour = 30, TeacherName = "袁奇", Colleges = "中南财经政法大学" };
+            //3.使用有参数的构造方法为属性赋值
+            Course course3 = new Course(1003, "高等数学（一）", 65, "朱建民", "国防科技大学");
+            Course course4 = new Course(1004, "投资理财与生活", 10, "郑海荣", "福建农林大学");
+            Course course5 = new Course(1005, "婚恋-职场-人格", 51, "张晓文", "武汉理工大学");
+        }
+    }
+```
 
