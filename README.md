@@ -79,17 +79,20 @@ namespace ClassCourse
     public class Course
     {
         public Course() { }
-        public Course(int courseid,string coursename, int classhour,string teachername)
+        public Course(int courseid, string coursename, int classhour, string teachername, string colleges)
         {
             //this关键字指向Course对象本身
             this.CourseId = courseid;
             this.CourseName = coursename;
             this.ClassHour = classhour;
             this.TeacherName = teachername;
+            this.Colleges = colleges;
         }
         public int CourseId { get; set; }//课程编号
         public string CourseName { get; set; }//课程名称
         public int ClassHour { get; set; }//课程课时
         public string TeacherName { get; set; }//教师姓名
+        public string Colleges { get; set; }//院校
     }
 ```
+
