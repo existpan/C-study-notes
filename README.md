@@ -73,3 +73,23 @@ namespace ClassCourse
 作用：更加灵活的初始化对象的“属性”。
 
 # 对象封装容器之泛型集合list和Dictionary的使用
+1. 泛型List元素添加、删除、遍历和快速查询的常用方法
+- 声明对象
+```csharp
+    public class Course
+    {
+        public Course() { }
+        public Course(int courseid,string coursename, int classhour,string teachername)
+        {
+            //this关键字指向Course对象本身
+            this.CourseId = courseid;
+            this.CourseName = coursename;
+            this.ClassHour = classhour;
+            this.TeacherName = teachername;
+        }
+        public int CourseId { get; set; }//课程编号
+        public string CourseName { get; set; }//课程名称
+        public int ClassHour { get; set; }//课程课时
+        public string TeacherName { get; set; }//教师姓名
+    }
+```
