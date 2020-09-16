@@ -131,4 +131,16 @@ namespace ClassCourse
 ```
 - 泛型集合 语法List<T> list=new List<T>();
 T=>Type 在定义时明确规定使用类型;
+- 将指定集合中的元素添加到list末尾
+```csharp
+  courseslist.AddRange(coursesArray);
+```
+- 将List<T>中的元素复制到新数组中
+```csharp
+  Course[] coursesArray2 = courseslist.ToArray();
+```
+- 将数组中的元素复制到新List<T>中
+```csharp
+  List<Course> coursesList2 = coursesArray2.ToList();
+```
   
