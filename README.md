@@ -162,3 +162,49 @@ T=>Type 在定义时明确规定使用类型;
             var result2 = from c in courses where c.CourseId > 10002 select c;
         }
 ```
+
+# Dictionary字典泛型集合的使用
+1. Dictionary<K,V>字典，<K,V>约束集合中元素类型；编译时检查类型约束，无需装箱拆箱操作，与哈希表操作类似。
+- 定义类和对象
+```csharp
+    class Student
+    {
+        public Student() { }
+        public Student(int studentid, string studentname, int age)
+        {
+            this.StudentId = studentid;
+            this.StudentName = studentname;
+            this.Age = age;
+        }
+        public int StudentId { get; set; }
+        public string StudentName { get; set; }
+        public int Age { get; set; }
+    }
+```
+- 创建对象
+```csharp
+            Student sjx = new Student { StudentId = 1001, StudentName = "沈剑心", Age = 17 };
+            Student qj = new Student { StudentId = 1002, StudentName = "祁进", Age = 18 };
+            Student xy = new Student { StudentId = 1003, StudentName = "玄逸", Age = 55 };
+```
+- 定义字典类型集合，填充集合
+```csharp
+            Dictionary<string, Student> keyValuePairs = new Dictionary<string, Student>();
+            keyValuePairs.Add("sjx", sjx);
+            keyValuePairs.Add("qj", qj);
+            keyValuePairs.Add("xy", xy);
+```
+- 遍历字典keys
+```csharp
+            foreach (var item in keyValuePairs.Keys)
+            {
+                Console.WriteLine($"{item}\t");
+            }
+```
+- 遍历字典values
+```csharp
+            foreach (var item in keyValuePairs.Values)
+            {
+                Console.WriteLine($"{item.StudentName}\t{item.StudentId}\t{item.Age}");
+            }
+```
