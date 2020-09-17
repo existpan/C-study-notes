@@ -143,4 +143,22 @@ T=>Type 在定义时明确规定使用类型;
 ```csharp
   List<Course> coursesList2 = coursesArray2.ToList();
 ```
-  
+- 集合遍历
+```csharp
+          public void TraversalList2(List<Course> courses)
+        {
+            foreach (var item in courses)
+            {
+                Console.WriteLine($"{item.CourseId}\t{item.CourseName}\t{item.ClassHour}\t");
+            }
+        }
+```
+- 集合查询
+```csharp
+          public void QueryElements(List<Course> courses) 
+        {
+            List<Course> result1 = courses.FindAll(c => c.CourseId > 10002);
+
+            var result2 = from c in courses where c.CourseId > 10002 select c;
+        }
+```
