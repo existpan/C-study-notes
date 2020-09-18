@@ -208,3 +208,5 @@ T=>Type 在定义时明确规定使用类型;
                 Console.WriteLine($"{item.StudentName}\t{item.StudentId}\t{item.Age}");
             }
 ```
+# 基于比较器借口IComare实现集合对象排序
+1. 
