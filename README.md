@@ -214,4 +214,55 @@ T=>Type 在定义时明确规定使用类型;
 List<int> score=new List<int>{1,3,4,5,2};//使用泛型集合初始化器 初始化score
 score.Sort();//调用Sort方法进行排序即可。
 ```
+2. List泛型集合排序方法实现。
+```csharp
+    public class Course : IComparable<Course>
+    {
+        public Course() { }
+        public Course(int courseid, string coursename, int classhour, string teachername, string colleges)
+        {
+            //this关键字指向Course对象本身
+            this.CourseId = courseid;
+            this.CourseName = coursename;
+            this.ClassHour = classhour;
+            this.TeacherName = teachername;
+            this.Colleges = colleges;
+        }
+        public int CourseId { get; set; }//课程编号
+        public string CourseName { get; set; }//课程名称
+        public int ClassHour { get; set; }//课程课时
+        public string TeacherName { get; set; }//教师姓名
+        public string Colleges { get; set; }//院校
 
+        public int CompareTo(Course other)
+        {
+            return this.CourseId.CompareTo(other.CourseId);
+        }
+    }
+```
+3. 自定义排序类实现：
+```csharp
+    }
+    #region 自定义排序类
+    /// <summary>
+    /// 课程ID升序
+    /// </summary>
+    public class IdASC : IComparer<Course>
+    {
+        public int Compare(Course x, Course y)
+        {
+            return x.CourseId.CompareTo(y.CourseId);
+        }
+    }
+    /// <summary>
+    /// 课程ID降序
+    /// </summary>
+    public class IdDESC : IComparer<Course>
+    {
+        public int Compare(Course x, Course y)
+        {
+            return y.CourseId.CompareTo(x.CourseId);
+        }
+    }
+    #endregion
+```
