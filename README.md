@@ -242,7 +242,6 @@ score.Sort();//调用Sort方法进行排序即可。
 ```
 3. 自定义排序类实现：
 ```csharp
-    }
     #region 自定义排序类
     /// <summary>
     /// 课程ID升序
